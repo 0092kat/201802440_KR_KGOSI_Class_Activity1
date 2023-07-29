@@ -18,6 +18,6 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Post reports as comments in GitHub PRs
-          echo "## Model Performance" > report.md
+          echo "## RandomForestRegressor Model Performance" > report.md
           cat results.txt >> report.md
           cml comment create report.md
