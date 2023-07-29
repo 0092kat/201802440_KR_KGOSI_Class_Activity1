@@ -4,7 +4,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     # optionally use a convenient Ubuntu LTS + DVC + CML image
-    # container: ghcr.io/iterative/cml:0-dvc2-base1
+    container: ghcr.io/iterative/cml:0-dvc2-base1
     steps:
       - uses: actions/checkout@v3
       - uses: iterative/setup-cml@v1
@@ -20,4 +20,5 @@ jobs:
           # Post reports as comments in GitHub PRs
           echo "## RandomForestRegressor Model Performance" > report.md
           cat results.txt >> report.md
+          echo '![](./actual_vs_predicted.png "Predicted vs Actual")' >> report.md
           cml comment create report.md
