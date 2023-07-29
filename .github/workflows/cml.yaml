@@ -15,7 +15,7 @@ jobs:
           python code.py
       - name: Write CML report
         env:
-          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_TOKEN: ${{ secrets.TOKEN }}
         run: |
           # Post reports as comments in GitHub PRs
           echo "## RandomForestRegressor Model Performance" > report.md
