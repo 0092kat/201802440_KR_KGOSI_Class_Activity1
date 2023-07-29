@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import GradientBoostingRegressor
 from sklearn import metrics
 import matplotlib.pyplot as plt
 
@@ -30,7 +30,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=0)
 
 # Creating the RandomForestRegressor model and fitting the data
-model = RandomForestRegressor(random_state=0)
+model = GradientBoostingRegressor(random_state=0)
 
 model.fit(X_train, y_train)
 
