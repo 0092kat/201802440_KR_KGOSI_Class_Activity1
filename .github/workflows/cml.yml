@@ -1,4 +1,4 @@
-name: lecture-2
+name: 201802440_KR_KGOSI_Class_Activity1
 on: [push]
 jobs:
   run:
