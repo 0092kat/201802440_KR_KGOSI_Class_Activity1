@@ -20,5 +20,4 @@ jobs:
           # Post reports as comments in GitHub PRs
           echo "## RandomForestRegressor Model Performance" > report.md
           cat results.txt >> report.md
-          echo "![](./actual_vs_predicted.png)" >> report.md
           cml comment create report.md
