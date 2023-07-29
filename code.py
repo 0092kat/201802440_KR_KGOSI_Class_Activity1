@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn import metrics
+import matplotlib.pyplot as plt
 
 df_raw = pd.read_csv("data.csv", sep=";")
 
@@ -42,3 +43,15 @@ print("R2 Score:", r2_score)
 # Writing the result to a file
 with open('results.txt', 'w') as f:
     f.write(f"R2 Score: {r2_score}\n")
+
+# Create a scatter plot of actual vs. predicted values
+plt.scatter(y_test, y_pred)
+plt.xlabel("Actual Values")
+plt.ylabel("Predicted Values")
+plt.title("Actual vs. Predicted Values")
+
+# Save the plot as 'actual_vs_predicted.png'
+plt.savefig('actual_vs_predicted.png')
+
+# Show the plot (optional)
+plt.show()
